@@ -3,16 +3,20 @@ module.exports = {
     host: '0.0.0.0',
     port: 3000
   },
-  css: ['normalize.css'],
+  plugins: [
+    { src: '~/plugins/swiper.js', ssr: false },
+  ],
+  css: ['normalize.css', 'swiper/dist/css/swiper.css'],
+  
   /*
   ** Headers of the page
   */
   head: {
-    title: 'default-nuxt-structure',
+    title: 'smallbites-web',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt Structure' }
+      { hid: 'description', name: 'description', content: '스몰바이츠 프로젝트(가칭)' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -26,7 +30,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /* Run ESLint on save */
+    /*
+    ** Run ESLint on save
+    */
     extend (config, { isDev }) {
       if (isDev && process.client) {
         config.module.rules.push({
