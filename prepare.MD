@@ -34,14 +34,14 @@ vue init nuxt-community/starter-template <project-name>
 
 ## NUXT 기본 구조
 ```bash
-├── assets     # css, font, js 등 컴파일되지 않은 assets류 파일이 저장되는 곳
-├── components # Vue.js 컴포넌트가 저장되는 곳
-├── layouts    # 앱의 레이아웃과 관련된 파일이 저장되는 곳
-├── middleware # 앱 내 페이지나 레이아웃 랜더링 전 실행시킬 js파일이 저장되는 곳 (auth.js 등)
-├── pages      # 라우팅을 포함한 vue페이지가 저장되는 곳. (vue 파일 규칙에 따라 라우터 자동생성)
-├── plugins    # 루트 vue 앱이 생성되기 전 실행할 js 플러그인이 저장되는 곳
-├── static     # 정적 파일이 저장되는 곳. 루트 컨텍스트로부터 파일이 서비스된다
-├── store      # Vuex store 파일이 저장되는 곳. index.js가 존재하면 자동으로 활성화 
+├── assets         # css, font, js 등 컴파일되지 않은 assets류 파일이 저장되는 곳
+├── components     # Vue.js 컴포넌트가 저장되는 곳
+├── layouts        # 앱의 레이아웃과 관련된 파일이 저장되는 곳
+├── middleware     # 앱 내 페이지나 레이아웃 랜더링 전 실행시킬 js파일이 저장되는 곳 (auth.js 등)
+├── pages          # 라우팅을 포함한 vue페이지가 저장되는 곳. (vue 파일 규칙에 따라 라우터 자동생성)
+├── plugins        # 루트 vue 앱이 생성되기 전 실행할 js 플러그인이 저장되는 곳
+├── static         # 정적 파일이 저장되는 곳. 루트 컨텍스트로부터 파일이 서비스된다
+├── store          # Vuex store 파일이 저장되는 곳. index.js가 존재하면 자동으로 활성화 
 ├── nuxt.config.js # Nuxt 관련 사용자 정의 설정이 저장되는 파일
 └── package.json   # 앱 의존성 및 실행 스크립트를 포함하는 기본 파일, 반드시 존재해야한다.
 ```
