@@ -38,7 +38,7 @@ export default {
         loop: true,
         slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 30,
+        spaceBetween: 0,
         pagination: {
           el: '.swiper-pagination',
           dynamicBullets: true
