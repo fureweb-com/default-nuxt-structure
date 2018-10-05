@@ -1,1 +1,1 @@
-nohup npm run server &> output.log
+nohup npm run server &> output.log &
