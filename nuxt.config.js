@@ -1,11 +1,11 @@
 const API_SERVER_HOST = require('./constants').API_SERVER_HOST
 const CURRENT_ENV = process.env.NODE_ENV
-const API_SERVER_URL = API_SERVER_HOST[CURRENT_ENV]
+const [API_SERVER_URL, API_SERVER_PORT = 3000] = API_SERVER_HOST[CURRENT_ENV].split(':')
 
 module.exports = {
   server: {
     host: '0.0.0.0',
-    port: 3000
+    port: 4000
   },
   router: {
     fallback: true
@@ -15,7 +15,7 @@ module.exports = {
   ],
   axios: {
     host: API_SERVER_URL,
-    port: 5000,
+    port: API_SERVER_PORT,
     prefix: '/api'
   },
   plugins: [
