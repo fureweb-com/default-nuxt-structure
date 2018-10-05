@@ -48,5 +48,5 @@ export default {
 
 <style lang="scss">
 .swiper-slide img { width: 100% }
-.profileImage { width: 40px; border-radius: 50% }
+.profileImage { width: 40px; height: 40px; border-radius: 50% }
 </style>
