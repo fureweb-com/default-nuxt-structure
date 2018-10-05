@@ -22,8 +22,10 @@ export default {
       title: 'Hello World!',
     }
   },
-  mounted() {
+  async mounted() {
     this.isCreated = true
+
+    console.log(await this.$axios.$get('/participants'))
   },
 }
 </script>
