@@ -3,6 +3,7 @@
     <loading v-show="!isCreated"></loading>
     <section class="body" v-show="isCreated">
       <div>{{title}}</div>
+      <nuxt-link to="/login">로그인</nuxt-link>
 
       <swiper :isCreated="isCreated"></swiper>
     </section>
@@ -30,6 +31,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .swiper-slide img { width: 100% }
 </style>
