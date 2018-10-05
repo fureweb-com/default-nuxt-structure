@@ -35,7 +35,7 @@ export default {
 
   // 컴포넌트 내부 모델, 계산된 속성, 메소드, 감시
   data() {},
-  computed() {},
+  computed: {},
   methods: {},
   watch: {},
 
