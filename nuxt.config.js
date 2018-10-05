@@ -1,3 +1,7 @@
+const API_SERVER_HOST = require('./constants').API_SERVER_HOST
+const CURRENT_ENV = process.env.NODE_ENV
+const API_SERVER_URL = API_SERVER_HOST[CURRENT_ENV]
+
 module.exports = {
   server: {
     host: '0.0.0.0',
@@ -5,6 +9,14 @@ module.exports = {
   },
   router: {
     fallback: true
+  },
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
+    host: API_SERVER_URL,
+    port: 5000,
+    prefix: '/api'
   },
   plugins: [
     { src: '~/plugins/swiper.js', ssr: false },
@@ -19,7 +31,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '스몰바이츠 프로젝트(가칭)' }
+      { hid: 'description', name: 'description', content: 'smallbites' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
