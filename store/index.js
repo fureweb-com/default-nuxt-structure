@@ -4,18 +4,22 @@ const store = () => new Vuex.Store({
 
   state: {
     isLoggedIn: false,
-    nickname: undefined
+    nickname: undefined,
+    thumbnailImage: undefined,
   },
   mutations: {
     login(state) {
       state.isLoggedIn = true
     },
-    logout (state) {
+    logout(state) {
       state.isLoggedIn = false
       state.nickname = undefined
     },
-    setNickname (state, payload) {
+    setNickname(state, payload) {
       state.nickname = payload
+    },
+    setThumbnailImage(state, payload) {
+      state.thumbnailImage = payload
     }
   }
 })
