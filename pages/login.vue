@@ -57,6 +57,7 @@ export default {
               Kakao.API.vue.thumbnail_image = thumbnail_image
               Kakao.API.vue.$store.commit('login')
               Kakao.API.vue.$store.commit('setNickname', nickname)
+              Kakao.API.vue.$store.commit('setThumbnailImage', thumbnail_image)
               Kakao.API.vue = null
               // console.log(user_id, email, nickname, profile_image, thumbnail_image);
 
