@@ -7,7 +7,7 @@
         <nuxt-link to="/login">로그인</nuxt-link>
       </section>
       <section v-show="isLoggedIn" class="whenLoggedIn">
-        {{nickname}}님! 안녕하세요. <nuxt-link to="/logout">로그아웃</nuxt-link>
+        <img class="profileImage" :src="thumbnailImage" alt="프로필이미지"> {{nickname}}님! 안녕하세요. <nuxt-link to="/logout">로그아웃</nuxt-link>
       </section>
 
       <swiper :isCreated="isCreated"></swiper>
@@ -33,6 +33,9 @@ export default {
     },
     nickname() {
       return this.$store.state.nickname
+    },
+    thumbnailImage() {
+      return this.$store.state.thumbnailImage
     }
   },
   async mounted() {
@@ -45,4 +48,5 @@ export default {
 
 <style lang="scss">
 .swiper-slide img { width: 100% }
+.profileImage { width: 40px; border-radius: 50% }
 </style>
