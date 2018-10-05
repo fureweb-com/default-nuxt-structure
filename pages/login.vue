@@ -55,6 +55,9 @@ export default {
               Kakao.API.vue.nickname = nickname
               Kakao.API.vue.profile_image = profile_image
               Kakao.API.vue.thumbnail_image = thumbnail_image
+              Kakao.API.vue.$store.commit('login')
+              Kakao.API.vue.$store.commit('setNickname', nickname)
+              Kakao.API.vue = null
               // console.log(user_id, email, nickname, profile_image, thumbnail_image);
 
               // const alertMessage = `UID: ${user_id}\nEMAIL: ${email || '입력되지않음'}\n닉네임: ${nickname}\n프로필이미지경로: ${profile_image}\n썸네일이미지경로: ${thumbnail_image}`
