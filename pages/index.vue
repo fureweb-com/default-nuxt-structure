@@ -2,8 +2,13 @@
   <section class="container">
     <loading v-show="!isCreated"></loading>
     <section class="body" v-show="isCreated">
-      <div>{{title}}</div>
-      <nuxt-link to="/login">로그인</nuxt-link>
+      <!--navigator 위치 / 로그인 상태인 경우, 아닌 경우 노출이 다름 / 컴포넌트로 분리 필요 -->
+      <section v-show="!isLoggedIn" class="whenLoggedOut">
+        <nuxt-link to="/login">로그인</nuxt-link>
+      </section>
+      <section v-show="isLoggedIn" class="whenLoggedIn">
+        {{nickname}}님! 안녕하세요. <nuxt-link to="/logout">로그아웃</nuxt-link>
+      </section>
 
       <swiper :isCreated="isCreated"></swiper>
     </section>
@@ -19,8 +24,15 @@ export default {
   components: { Loading, Swiper },
   data() {
     return {
-      isCreated: false,
-      title: 'Hello World!',
+      isCreated: false
+    }
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.isLoggedIn
+    },
+    nickname() {
+      return this.$store.state.nickname
     }
   },
   async mounted() {
